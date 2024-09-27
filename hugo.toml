@@ -1,0 +1,9 @@
+baseURL = 'https://keegoid.com/'
+languageCode = 'en-us'
+title = 'Keegoid'
+theme = "a-one-pager"
+enableRobotsTXT = true
+enableGitInfo = true
+
+[params]
+  mainSections = ["posts"]

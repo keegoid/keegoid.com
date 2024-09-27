@@ -1,0 +1,92 @@
+body {
+  font-size: 16px;
+  background-color: #ffffff;
+  color: #333333;
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  position: relative;
+  color: #1e90ff;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #104e8b;
+  text-decoration: underline;
+  text-decoration-color: #104e8b;
+  text-decoration-style: wavy;
+}
+
+a:focus {
+  outline: 2px dashed #104e8b;
+}
+
+.container {
+  max-width: 800px; /* Adjust as needed */
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.content-wrapper {
+  display: flex;
+  align-items: flex-start;
+  position: relative; /* Establishes a positioning context */
+}
+
+.content {
+  flex: 1;
+  min-width: 0; /* Prevents overflow in flex items */
+}
+
+.toc {
+  position: -webkit-sticky; /* For Safari compatibility */
+  position: sticky;
+  top: 20px;
+  margin-left: 20px; /* Fixed distance to the right of the content */
+  max-width: 220px; /* Fixed width */
+}
+
+.toc h2 {
+  font-size: 1.2em;
+  margin-top: 0;
+}
+
+.toc ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.toc li {
+  margin-bottom: 10px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media screen and (max-width: 768px) {
+  .content-wrapper {
+    flex-direction: column;
+  }
+
+  .toc {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-width: none;
+    margin-left: 0;
+    background-color: #ffffff;
+    z-index: 999;
+    overflow-y: auto;
+    border-bottom: 1px solid #ccc;
+  }
+
+  .content {
+    margin-top: 60px; /* Adjust to prevent overlap with the fixed TOC */
+  }
+}
+
