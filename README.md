@@ -1,20 +1,19 @@
+# My Personal Site
+
+Welcome to my personal website! This space is dedicated to sharing my daily routines, the products I love and use, and interesting tidbits from my life. I hope you find something here that inspires or assists you.
+
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 **Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
 
-- [My Personal Site](#my-personal-site)
-  - [About the Site](#about-the-site)
-  - [Features](#features)
-  - [Technologies Used](#technologies-used)
-  - [Getting Started](#getting-started)
-    - [Prerequisites](#prerequisites)
-    - [Installation](#installation)
+- [About the Site](#about-the-site)
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
-
-# My Personal Site
-
-Welcome to my personal website! This space is dedicated to sharing my daily routines, the products I love and use, and interesting tidbits from my life. I hope you find something here that inspires or assists you.
 
 ## About the Site
 
