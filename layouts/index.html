@@ -3,13 +3,31 @@
     <div class="content-wrapper">
       <!-- Table of Contents -->
       <nav class="toc">
-        <h2>Table of Contents</h2>
-        {{ .TableOfContents }}
+        <h2>Articles</h2>
+        <ul>
+          {{ range .Site.RegularPages.ByDate }}
+            <li>
+              <a href="#{{ .File.TranslationBaseName }}">{{ .Title }}</a>
+              <!-- Optionally, extract and list subheadings -->
+            </li>
+          {{ end }}
+        </ul>
       </nav>
 
       <!-- Main Content -->
       <div class="content">
-        {{ .Content }}
+        {{ range .Site.RegularPages.ByDate }}
+          <article class="post" id="{{ .File.TranslationBaseName }}">
+            <h1>{{ .Title }}</h1>
+            <div class="post-dates">
+              <span class="post-date">Published: {{ .Date.Format "January 2, 2006" }}</span>{{ if gt .Lastmod .Date }}&nbsp;|&nbsp;<span class="post-lastmod">Updated: {{ .Lastmod.Format "January 2, 2006" }}</span>{{ end }}
+            </div>
+            <div class="post-content">
+              {{ .Content }}
+            </div>
+            <hr />
+          </article>
+        {{ end }}
       </div>
     </div>
   </div>

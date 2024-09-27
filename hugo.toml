@@ -6,3 +6,10 @@ enableGitInfo = true
 
 [params]
   mainSections = ["posts"]
+  description = "Sharing my routines, product recommendations, and interesting life updates."
+
+[outputs]
+  home = ["HTML"]
+  page = []
+  section = []
+  taxonomy = []

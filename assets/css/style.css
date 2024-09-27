@@ -24,6 +24,13 @@
 
 /* Base Styles */
 body {
+  background-image: url('/images/background.jpg');
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  background-size: cover;
+  background-attachment: fixed;
+  opacity: 0.96;
+  overflow-x: visible;
   font-size: var(--font-size);
   background-color: var(--background-color);
   color: var(--text-color);
@@ -82,6 +89,7 @@ a:focus {
 .content-wrapper {
   display: flex;
   gap: var(--content-toc-gap);
+  background-color: #ffffff;
 }
 
 .content {
@@ -104,18 +112,19 @@ a:focus {
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Roboto', sans-serif;
   color: var(--text-color);
-  margin-top: 1.5em;
-  margin-bottom: 0.5em;
+  margin-top: 1em;
+  margin-bottom: 0.2em;
   line-height: 1.2;
 }
 
 h1 {
   font-size: 2.5rem;
+  color: var(--secondary-color);
 }
 
 h2 {
   font-size: 2rem;
-  color: var(--secondary-color);
+  color: var(--primary-color);
 }
 
 h3 {
@@ -131,6 +140,65 @@ ul, ol {
   padding-left: 1.5em;
 }
 
+/* Background Decoration */
+.background-decoration {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  min-width: var(--container-max-width);
+  width: auto;
+  height: auto;
+  opacity: 1;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Header Styles */
+.site-header {
+  background-color: var(--background-color);
+  padding: 20px 0;
+  border-bottom: 1px solid var(--border-color);
+  margin-bottom: 20px;
+}
+
+.logo-description {
+  display: flex;
+  align-items: center;
+}
+
+.site-logo {
+  height: 80px; /* Adjust as needed */
+  width: auto;
+  margin-right: 20px;
+}
+
+.site-title {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.site-tagline {
+  margin: 5px 0 0 0;
+  color: #777777;
+  font-size: 1.25rem;
+}
+
+/* Footer Styles */
+.site-footer {
+  background-color: var(--background-color);
+  padding: 20px 0;
+  border-top: 1px solid var(--border-color);
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.site-footer p {
+  margin: 0;
+  color: #777777;
+  font-size: 0.9em;
+}
+
 /* Post Styles */
 .post {
   margin-bottom: 2em;
@@ -140,19 +208,15 @@ ul, ol {
   margin-bottom: 0.5em;
 }
 
+.post-date,
+.post-lastmod {
+  display: inline;
+}
+
 .post-dates {
   font-size: 0.9em;
   color: #777777;
   margin-bottom: 1em;
-}
-
-.post-date,
-.post-lastmod {
-  display: block;
-}
-
-.post-lastmod {
-  margin-top: 0.5em;
 }
 
 .post-content {
@@ -283,6 +347,10 @@ hr {
 
   .content {
     margin-right: 0;
+  }
+
+  .background-decoration {
+    display: none;
   }
 }
 

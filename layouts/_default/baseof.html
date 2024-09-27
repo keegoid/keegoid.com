@@ -24,7 +24,36 @@
   <link rel="stylesheet" href="{{ $styles.Permalink }}" integrity="{{ $styles.Data.Integrity }}">
 </head>
 <body>
+  <!-- Header Section -->
+  <header class="site-header">
+    <div class="container">
+      <div class="logo-description">
+        <a href="{{ .Site.BaseURL }}">
+          <img src="/images/logo.jpg" alt="{{ .Site.Title }} Logo" class="site-logo">
+        </a>
+        <div class="site-description">
+          <h1 class="site-title">{{ .Site.Title }}</h1>
+          <p class="site-tagline">{{ .Site.Params.description }}</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
   {{ block "main" . }}{{ end }}
+
+  <!-- Background Decoration -->
+  <!-- <img src="/images/DALL·E 2024-09-27 14.59.52.webp" alt="" aria-hidden="true" class="background-decoration" loading="lazy"> -->
+
+  <!-- Footer Section -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; {{ now.Format "2006" }} Keegoid LLC. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
   {{ block "scripts" . }}{{ end }}
+
 </body>
 </html>
