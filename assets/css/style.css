@@ -12,6 +12,7 @@
   --border-color: #ccc;
 
   --font-family: 'Open Sans', sans-serif;
+  --header-font-family: 'Merriweather', serif;
   --font-size: 16px;
   --line-height: 1.6;
   --background-opacity: 0.13;
@@ -243,7 +244,7 @@ a:focus {
 
 /* Typography */
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Roboto', sans-serif;
+  font-family: var(--header-font-family);
   color: var(--text-color);
   margin-top: 0.5em;
   margin-bottom: 0.2em;
