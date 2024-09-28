@@ -8,39 +8,3 @@ draft = false
 ## section
 
 Hello there!
-
-k
-
-k
-
-k
-
-k
-
-k
-
-k
-
-k
-
-k
-
-k
-
-k
-
-k
-
-k
-
-k
-
-k
-
-k
-
-k
-
-k
-
-k

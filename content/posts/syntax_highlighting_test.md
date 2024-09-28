@@ -1,11 +1,11 @@
 +++
-title = 'Syntax Highlighting Test f'
+title = 'Syntax Highlighting Test'
 date = 2024-09-28 09:07:25
 background_image = "/images/methuselah_tree.jpg"
 draft = false
 +++
 
-## section f
+## section
 
 Here is some Python code:
 
@@ -14,7 +14,7 @@ def hello_world():
     print("Hello, world!")
 ```
 
-Here is some JavasScript code freedom:
+Here is some JavasScript code:
 
 ```js
 function helloWorld() {
