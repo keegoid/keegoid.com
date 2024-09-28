@@ -1,6 +1,6 @@
 # My Personal Site
 
-Welcome to my personal website! This space is dedicated to sharing my daily routines, the products I love and use, and interesting tidbits from my life. I hope you find something here that inspires or assists you.
+Welcome to my personal website! This space is dedicated to sharing my daily routines, the products I love and use, and appreciation of nature. I hope you find something here that inspires or assists you. Live long and prosper (LLAP).
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
@@ -12,6 +12,7 @@ Welcome to my personal website! This space is dedicated to sharing my daily rout
 - [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
+- [License](#license)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -19,9 +20,9 @@ Welcome to my personal website! This space is dedicated to sharing my daily rout
 
 This site serves as a personal blog where I document:
 
-- **Daily Routines**: Insights into my habits and practices that help me stay productive and balanced.
-- **Product Recommendations**: Honest reviews and links to products I personally use and recommend.
-- **Life Updates**: Stories, experiences, and reflections on various aspects of life.
+- **Daily Routine**: Insights into my habits and practices that help me stay productive and balanced.
+- **Products**: Honest reviews and links to products I personally use and recommend.
+- **Nature**: Stories, experiences, and reflections on the natural world.
 
 Some of the product links are affiliate links. This means I may earn a small commission if you make a purchase through these links, at no additional cost to you. Your support helps keep this site running.
 
@@ -53,5 +54,23 @@ If you'd like to run the site locally or explore the code, follow these steps:
 
 1. **Clone the Repository**
 
-   ```bash
-   git clone https://github.com/yourusername/your-site-repo.git
+    ```sh
+    git clone https://github.com/keegoid/keegoid.com.git
+    ```
+
+1. **Run the Hugo server in development mode**
+
+    ```sh
+    hugo server -D
+    ```
+
+## License
+
+This repository contains the source code for my personal website built with Hugo.
+
+- **Code**: Licensed under the [MIT License](./LICENSE)
+- **Content**: [Keegoid](https://keegoid.com/) © 2024 is licensed under [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/?ref=chooser-v1)
+
+---
+
+**Note**: This repository is intended as a template for building your own site. Please replace the content with your own.

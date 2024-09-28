@@ -1,9 +1,13 @@
+/* Import syntax highlighting styles */
+@import 'syntax.css';
+
 /* Variables */
 :root {
   --primary-color: #1e90ff;
   --primary-hover-color: #104e8b;
   --secondary-color: #FF8C1E;
   --secondary-hover-color: #CC6F18;
+  --code-block-primary-color: #24292e;
   --background-color: #ffffff;
   --toc-background-color-rgb: 245,245,245;
   --content-background-color: #fefefe;
@@ -11,22 +15,23 @@
   --light-text-color: #777777;
   --border-color: #ccc;
 
-  --font-family: 'Open Sans', sans-serif;
-  --header-font-family: 'Merriweather', serif;
+  --font-family: 'Ubuntu Sans', sans-serif;
+  --header-font-family: 'Ubuntu', serif;
+  --code-block-font-family: 'Ubuntu Mono', monospace;
   --font-size: 16px;
   --line-height: 1.6;
-  --background-opacity: 0.13;
+  --background-opacity: 0.1;
   --toc-opacity: 0.5;
   --z-index-fixed: 999;
 
-  --container-max-width: 1280px;
+  --container-max-width: 1200px;
   --header-padding: 20px;
   --header-bottom-margin: 20px;
   --container-padding: 0px;
-  --content-toc-gap: 20px;
+  --content-toc-gap: 0px;
   --footer-padding: 20px;
   --toc-width: 220px;
-  --toc-top: 0;
+  --toc-top: 0px;
 }
 
 /* Base Styles */
@@ -79,10 +84,41 @@ a:focus {
   outline-offset: 4px;
 }
 
+/* Code Block Styles */
+code, pre {
+  font-family: var(--code-block-font-family);
+  color: var(--code-block-primary-color);
+}
+
+pre {
+  background-color: #f8f8f8;
+  padding: 16px;
+  overflow: auto;
+  border-radius: 6px;
+  font-size: 85%;
+  line-height: 1.45;
+}
+
+pre code {
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  border: none;
+  font-size: inherit;
+}
+
+code {
+  background-color: rgba(27,31,35,.05);
+  padding: 0.2em 0.4em;
+  margin: 0;
+  font-size: 85%;
+  border-radius: 3px;
+}
+
 /* Header Styles */
 .site-header {
   background-color: var(--background-color);
-  padding: var(--header-padding) 0;
+  padding: var(--header-padding);
   border-bottom: 1px solid var(--border-color);
   margin-bottom: var(--header-bottom-margin);
   /* border-radius: 8px;
@@ -141,6 +177,9 @@ a:focus {
 /* Post Styles */
 .post {
   margin-bottom: 2em;
+  border-radius: 8px;
+  border: #34e;
+  border-style: solid;
 }
 
 .post::before {

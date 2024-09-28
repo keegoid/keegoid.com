@@ -1,39 +1,17 @@
 <!DOCTYPE html>
 <html lang="{{ .Site.LanguageCode }}">
-<head>
-  {{ partial "head.html" . }}
-</head>
+{{ partial "head.html" . }}
 <body>
   <!-- Header Section -->
-  <header class="site-header">
-    <div class="container">
-      <div class="logo-description">
-        <a href="{{ .Site.BaseURL }}">
-          <img src="/images/logo.jpg" alt="{{ .Site.Title }} Logo" class="site-logo">
-        </a>
-        <div class="site-description">
-          <h1 class="site-title">{{ .Site.Title }}</h1>
-          <p class="site-tagline">{{ .Site.Params.description }}</p>
-        </div>
-      </div>
-    </div>
-  </header>
+  {{ partial "header.html" . }}
 
   <!-- Main Content -->
   {{ block "main" . }}{{ end }}
 
-  <!-- Background Decoration -->
-  <!-- <img src="/images/background.jpg" alt="" aria-hidden="true" class="background-decoration" loading="lazy"> -->
-
   <!-- Footer Section -->
-  <footer class="site-footer">
-    <div class="container">
-      <p>&copy; {{ now.Format "2006" }} Keegoid LLC. All rights reserved. Built using <a href="https://gohugo.io/" alt="HUGO">HUGO</a> with help from <a href="https://chatgpt.com/" alt="ChatGPT o1-preview">ChatGPT o1-preview</a>, sourced on <a href="https://github.com/keegoid/keegoid.com/" alt="GitHub">GitHub</a>, and hosted by <a href="https://pages.cloudflare.com/" alt="Cloudflare Pages">Cloudflare Pages</a>.</p>
-    </div>
-  </footer>
+  {{ partial "footer.html" . }}
 
   <!-- Scripts -->
   {{ block "scripts" . }}{{ end }}
-
 </body>
 </html>

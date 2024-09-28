@@ -6,7 +6,16 @@ enableGitInfo = true
 
 [params]
   mainSections = ["posts"]
-  description = "Sharing my routines, product recommendations, and interesting life updates."
+  description = "LLAP | Longevity hacks, gadget love, and appreciation of nature."
+  defaultImage = "https://keegoid.com/images/logo.jpg"
+
+[markup]
+  [markup.highlight]
+    codeFences = true
+    guessSyntax = true
+    style = "github"
+    lineNumbers = true
+    defaultLang = ""
 
 [outputs]
   home = ["HTML"]
