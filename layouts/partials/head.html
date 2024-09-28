@@ -19,7 +19,9 @@
   <meta name="twitter:image" content="{{ with .Params.background_image }}{{ . }}{{ else }}{{ .Site.Params.defaultImage }}{{ end }}">
 
   <!-- CSS Styles -->
-  {{ $styles := resources.Get "css/style.css" | minify | fingerprint }}
+  {{ $styleMain := resources.Get "css/style.css" }}
+  {{ $styleSyntax := resources.Get "css/syntax.css" }}
+  {{ $styles := slice $styleSyntax $styleMain | resources.Concat "css/style.css" | minify | fingerprint }}
   <link rel="stylesheet" href="{{ $styles.Permalink }}" integrity="{{ $styles.Data.Integrity }}">
   <link rel="icon" type="image/x-icon" href="{{ "favicon.ico" | relURL }}">
 </head>

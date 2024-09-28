@@ -1,6 +1,3 @@
-/* Import syntax highlighting styles */
-@import 'syntax.css';
-
 /* Variables */
 :root {
   /* Layout */
@@ -9,11 +6,10 @@
   --header-bottom-margin: 20px;
   --container-padding: 20px;
   --content-toc-gap: 0px;
+  --post-padding-bottom: 600px;
   --footer-padding: 20px;
   --toc-width: 220px;
   --toc-top: 0px;
-  --hr-margin-top: 500px;
-  --hr-margin-bottom: 2em;
 
   /* Links */
   --primary-color: #1e90ff;
@@ -23,8 +19,6 @@
 
   /* Code blocks */
   --code-block-font-family: 'Ubuntu Mono', monospace;
-  --code-block-primary-color: #24292e;
-  --code-block-background-color: #f8f8f8;
   --code-block-border-color: #d1d5da;
 
   /* Shading */
@@ -39,6 +33,107 @@
   --light-text-color: #777777;
   --font-size: 16px;
   --line-height: 1.6;
+}
+
+/* Fonts */
+@font-face {
+  font-family: 'Ubuntu';
+  src: url('/fonts/Ubuntu-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Ubuntu';
+  src: url('/fonts/Ubuntu-LightItalic.ttf') format('truetype');
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Ubuntu';
+  src: url('/fonts/Ubuntu-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Ubuntu';
+  src: url('/fonts/Ubuntu-Italic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Ubuntu';
+  src: url('/fonts/Ubuntu-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+    font-family: 'Ubuntu';
+    src: url('/fonts/Ubuntu-MediumItalic.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Ubuntu';
+    src: url('/fonts/Ubuntu-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Ubuntu';
+    src: url('/fonts/Ubuntu-BoldItalic.ttf') format('truetype');
+    font-weight: 700;
+    font-style: italic;
+}
+
+@font-face {
+  font-family: 'Ubuntu Mono';
+  src: url('/fonts/UbuntuMono-Italic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Ubuntu Mono';
+  src: url('/fonts/UbuntuMono-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+    font-family: 'Ubuntu Mono';
+    src: url('/fonts/UbuntuMono-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Ubuntu Mono';
+    src: url('/fonts/UbuntuMono-BoldItalic.ttf') format('truetype');
+    font-weight: 700;
+    font-style: italic;
+}
+
+@font-face {
+  font-family: 'Ubuntu Sans';
+  src: url('/fonts/UbuntuSans-VariableFont.ttf') format('truetype');
+  /* font-weight requires a range: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Fonts/Variable_Fonts_Guide#Using_a_variable_font_font-face_changes */
+  font-weight: 300 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Ubuntu Sans';
+  src: url('/fonts/UbuntuSans-Italic-VariableFont.ttf') format('truetype');
+  /* font-weight requires a range: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Fonts/Variable_Fonts_Guide#Using_a_variable_font_font-face_changes */
+  font-weight: 300 700;
+  font-style: italic;
 }
 
 /* Base Styles */
@@ -94,17 +189,16 @@ a:focus {
 /* Code Block Styles */
 code, pre {
   font-family: var(--code-block-font-family);
-  color: var(--code-block-primary-color);
 }
 
 pre {
-  background-color: var(--code-block-background-color);
   padding: 16px;
   overflow: auto;
   border-radius: 6px;
   border: 1px solid var(--code-block-border-color);
   font-size: 85%;
   line-height: 1.45;
+  z-index: 1;
 }
 
 pre code {
@@ -117,11 +211,12 @@ pre code {
 }
 
 code {
-  background-color: rgba(27,31,35,0.05);
-  padding: 0.2em 0.4em;
+  padding: 0.2em;
   margin: 0;
   font-size: 85%;
   border-radius: 3px;
+  background-color: rgba(27,31,35,0.07);
+  z-index: 1;
 }
 
 /* Header Styles */
@@ -187,13 +282,7 @@ code {
 
 /* Post Styles */
 .post {
-  position: relative;
   margin-bottom: 2em;
-  overflow: visible;
-  background-image: var(--post-bg-image);
-  background-position: bottom right;
-  background-size: contain;
-  background-repeat: no-repeat;
   /* border-radius: 8px;
   border: #5a7;
   border-style: solid; */
@@ -215,7 +304,11 @@ code {
 }
 
 .post-content {
-  margin-bottom: 1em;
+  padding-bottom: var(--post-padding-bottom);
+  background-image: var(--post-bg-image);
+  background-position: bottom right;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 /* TOC Styles */
@@ -316,8 +409,6 @@ hr {
   border: 0;
   height: 1px;
   background: var(--secondary-color);
-  margin-top: var(--hr-margin-top);
-  margin-bottom: var(--hr-margin-bottom);
 }
 
 /* Footer Styles */

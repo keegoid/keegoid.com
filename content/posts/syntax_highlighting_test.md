@@ -1,7 +1,7 @@
 +++
 title = 'Syntax Highlighting Test'
 date = 2024-09-28 09:07:25
-background_image = "/images/methuselah_tree.jpg"
+background_image = "/images/methuselah_tree_color.jpg"
 draft = false
 +++
 
@@ -36,3 +36,5 @@ Here is some HTML code:
 </body>
 </html>
 ```
+
+Here is `some inline code`.

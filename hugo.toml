@@ -16,6 +16,8 @@ enableGitInfo = true
     style = "github"
     lineNumbers = true
     defaultLang = ""
+    noClasses = false
+    useClasses = true
 
 [outputs]
   home = ["HTML"]
