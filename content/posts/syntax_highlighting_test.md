@@ -1,7 +1,7 @@
 +++
 title = 'Syntax Highlighting Test'
 date = 2024-09-28 09:07:25
-background_image = "/images/methuselah_tree_color.jpg"
+background_image = "/images/napkin_drawing.webp"
 draft = false
 +++
 
