@@ -17,7 +17,7 @@
       <!-- Main Content -->
       <div class="content">
         {{ range .Site.RegularPages.ByDate }}
-          <article class="post" id="{{ .File.TranslationBaseName }}">
+          <article class="post" id="{{ .File.TranslationBaseName }}" style="--post-bg-image: url('{{ .Params.background_image }}');">
             <h1>{{ .Title }}</h1>
             <div class="post-dates">
               <span class="post-date">Published: {{ .Date.Format "January 2, 2006" }}</span>{{ if gt .Lastmod .Date }}&nbsp;|&nbsp;<span class="post-lastmod">Updated: {{ .Lastmod.Format "January 2, 2006" }}</span>{{ end }}
