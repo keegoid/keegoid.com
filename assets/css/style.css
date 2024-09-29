@@ -18,7 +18,7 @@
   --primary-hover-color: #104e8b;
   --secondary-color: #FF8C1E;
   --secondary-hover-color: #CC6F18;
-  --warning-color: #cc0000;
+  --tertiary-color: #1EFF90;
 
   /* Code blocks */
   --code-block-font-family: 'Ubuntu Mono', monospace;
@@ -30,10 +30,10 @@
   --toc-background-color: #f5f5f5;
   --code-background-rgb: 27,31,35;
   --callout-disclaimer-background-rgb: 255,140,30;
-  --callout-note-background-rgb: 30,144,255;
-  --callout-warning-background-rgb: 204,0,0;
+  --callout-affiliate-background-rgb: 30,144,255;
+  --callout-note-background-rgb: 30,255,144;
   --callout-opacity: 0.1;
-  --code-opacity: 0.7;
+  --code-opacity: 0.07;
 
   /* Text */
   --font-family: 'Ubuntu Sans', sans-serif;
@@ -487,12 +487,37 @@ input:focus, textarea:focus, select:focus {
   margin-bottom: 1em;
 }
 
-/* Callout Box Styles */
+/* Callout Quote Styles */
 .callout {
-  border: 1px solid var(--border-color);
+  border-left: 4px solid;
   padding: 1em;
   margin-bottom: 1.5em;
   border-radius: 6px;
+  background-color: rgba(var(--callout-background-rgb),var(--callout-opacity));
+  --callout-color: var(--text-color);
+}
+
+/* .callout {
+  border: 1px solid;
+  border-radius: 6px;
+} */
+
+.callout.disclaimer {
+  border-color: var(--secondary-color); /* Orange */
+  background-color: rgba(var(--callout-disclaimer-background-rgb),var(--callout-opacity));
+  --callout-color: var(--secondary-color);
+}
+
+.callout.affiliate {
+  border-color: var(--primary-color); /* Blue */
+  background-color: rgba(var(--callout-affiliate-background-rgb),var(--callout-opacity));
+  --callout-color: var(--primary-color);
+}
+
+.callout.note {
+  border-color: var(--tertiary-color); /* Green */
+  background-color: rgba(var(--callout-note-background-rgb),var(--callout-opacity));
+  --callout-color: var(--tertiary-color);
 }
 
 .callout p {
@@ -500,29 +525,12 @@ input:focus, textarea:focus, select:focus {
   color: var(--text-color);
 }
 
-.callout strong {
-  color: var(--secondary-color);
-}
-
-.callout-title {
+.callout .callout-title {
   margin: 0 0 0.5em 0;
-  color: var(--secondary-color);
 }
 
-/* Specific Styles Based on Type */
-.callout.disclaimer {
-  border-color: var(--secondary-color);
-  background-color: rgba(var(--callout-disclaimer-background-rgb),var(--callout-opacity));
-}
-
-.callout.note {
-  border-color: var(--primary-color);
-  background-color: rgba(var(--callout-note-background-rgb),var(--callout-opacity));
-}
-
-.callout.warning {
-  border-color: var(--warning-color);
-  background-color: rgba(var(--callout-warning-background-rgb),var(--callout-opacity));
+.callout .callout-title strong {
+  color: var(--callout-color);
 }
 
 /* Media Queries */

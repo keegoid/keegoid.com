@@ -2,5 +2,5 @@
   {{ if .Get "title" }}
     <p class="callout-title"><strong>{{ .Get "title" }}</strong></p>
   {{ end }}
-  {{ .Inner }}
+  {{ .Inner | markdownify }}
 </div>

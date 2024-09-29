@@ -9,8 +9,8 @@ draft = true
 I am not a medical professional, and the information presented here is not intended as medical advice. This content is for informational purposes only and reflects my personal experiences and opinions. Consult a qualified healthcare provider before making any changes to your health regimen. The supplements and routines discussed may not be suitable for everyone, and the reasons provided for their use may not be fully accurate or complete. I may update or modify this content as new information becomes available.
 {{< /callout >}}
 
-{{< callout type="note" title="Affiliate Disclosure" >}}
-Some of the links on this site are affiliate links. This means that if you click on a link and make a purchase, I may earn a commission at no additional cost to you. These commissions help support the maintenance of this site and allow me to continue sharing my longevity research and experiences. I only recommend products or services that I personally use and believe will add value to my readers.
+{{< callout type="affiliate" title="Affiliate Disclosure" >}}
+Some of the links on this site are affiliate links. This means that if you click on a link and make a purchase, I earn a commission at no additional cost to you. These commissions help support the maintenance of this site and allow me to continue sharing my longevity research and experiences. I only recommend products or services that I personally use and genuinely believe in.
 {{< /callout >}}
 
 With that out of the way, let's dive in!

@@ -61,6 +61,11 @@ If you'd like to run the site locally or explore the code, follow these steps:
 1. **Run the Hugo server in development mode**
 
     ```sh
+    hugo server
+    ```
+
+    ```sh
+    # build drafts
     hugo server -D
     ```
 

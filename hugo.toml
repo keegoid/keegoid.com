@@ -18,6 +18,12 @@ enableGitInfo = true
     defaultLang = ""
     noClasses = false
     useClasses = true
+  [markup.goldmark]
+    [markup.goldmark.parser]
+      attribute = true
+    [markup.goldmark.extensions]
+      table = true
+      linkify = true
 
 [outputs]
   home = ["HTML"]
