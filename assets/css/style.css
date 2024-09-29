@@ -6,8 +6,9 @@
   --header-bottom-margin: 20px;
   --container-padding: 20px;
   --content-toc-gap: 0px;
-  --post-content-padding-bottom: min(calc(58vw - 207px), 520px);
-  --post-content-padding-bottom-mobile: calc(60vw - 70px);
+  --variable-padding: calc(58vw - 207px);
+  --post-content-padding-bottom: min(var(--variable-padding), 520px); /* max padding 520px, below that, scale with viewport width */
+  --post-content-padding-bottom-mobile: calc(60vw - 70px); /* scale with viewport width when toc is on top */
   --footer-padding: 20px;
   --toc-width: 220px;
   --toc-top: 0px;
