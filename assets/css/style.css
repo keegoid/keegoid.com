@@ -18,15 +18,22 @@
   --primary-hover-color: #104e8b;
   --secondary-color: #FF8C1E;
   --secondary-hover-color: #CC6F18;
+  --warning-color: #cc0000;
 
   /* Code blocks */
   --code-block-font-family: 'Ubuntu Mono', monospace;
   --code-block-border-color: #d1d5da;
 
   /* Shading */
+  --border-color: #ccc;
   --background-color: #ffffff;
   --toc-background-color: #f5f5f5;
-  --border-color: #ccc;
+  --code-background-rgb: 27,31,35;
+  --callout-disclaimer-background-rgb: 255,140,30;
+  --callout-note-background-rgb: 30,144,255;
+  --callout-warning-background-rgb: 204,0,0;
+  --callout-opacity: 0.1;
+  --code-opacity: 0.7;
 
   /* Text */
   --font-family: 'Ubuntu Sans', sans-serif;
@@ -217,7 +224,7 @@ code {
   margin: 0;
   font-size: 85%;
   border-radius: 3px;
-  background-color: rgba(27,31,35,0.07);
+  background-color: rgba(var(--code-background-rgb),var(--code-opacity));
   z-index: 1;
 }
 
@@ -466,18 +473,56 @@ input:focus, textarea:focus, select:focus {
 }
 
 /* Highlights */
-/* .marked-text {
+.marked-text {
   background-color: var(--secondary-color);
   border-left: 4px solid var(--secondary-color);
   padding: 0.5em 1em;
   margin: 1em 0;
-} */
+}
 
 .timestamp {
   display: block;
   font-size: 0.9em;
   color: var(--light-text-color);
   margin-bottom: 1em;
+}
+
+/* Callout Box Styles */
+.callout {
+  border: 1px solid var(--border-color);
+  padding: 1em;
+  margin-bottom: 1.5em;
+  border-radius: 6px;
+}
+
+.callout p {
+  margin: 0;
+  color: var(--text-color);
+}
+
+.callout strong {
+  color: var(--secondary-color);
+}
+
+.callout-title {
+  margin: 0 0 0.5em 0;
+  color: var(--secondary-color);
+}
+
+/* Specific Styles Based on Type */
+.callout.disclaimer {
+  border-color: var(--secondary-color);
+  background-color: rgba(var(--callout-disclaimer-background-rgb),var(--callout-opacity));
+}
+
+.callout.note {
+  border-color: var(--primary-color);
+  background-color: rgba(var(--callout-note-background-rgb),var(--callout-opacity));
+}
+
+.callout.warning {
+  border-color: var(--warning-color);
+  background-color: rgba(var(--callout-warning-background-rgb),var(--callout-opacity));
 }
 
 /* Media Queries */

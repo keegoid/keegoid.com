@@ -1,0 +1,6 @@
+<div class="callout {{ .Get "type" | default "default" }}">
+  {{ if .Get "title" }}
+    <p class="callout-title"><strong>{{ .Get "title" }}</strong></p>
+  {{ end }}
+  {{ .Inner }}
+</div>
