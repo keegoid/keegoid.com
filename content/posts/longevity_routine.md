@@ -64,9 +64,8 @@ Monday through Friday, I start the morning with a tall glass of water filtered b
 
 I drink the mineral water with 5 capsules of [Neprinol AFD (Advanced Fibrin Defense)](https://amzn.to/3zzFf9j). It contains enzymes [nattokinase](https://en.wikipedia.org/wiki/Nattokinase) + [serrapeptase](https://en.wikipedia.org/wiki/Serratiopeptidase) that act on [fibrin](https://en.wikipedia.org/wiki/Fibrin) in the body[^2].
 
-[[#How I take Neprinol AFD]]
-
-[[#Why I take Neprinol AFD]]
+- [How I take Neprinol AFD](#how-i-take-neprinol-afd)
+- [Why I take Neprinol AFD](#why-i-take-neprinol-afd)
 
 ### Morning light
 
