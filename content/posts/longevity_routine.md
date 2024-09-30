@@ -19,10 +19,40 @@ My goal is to slow or reverse aging by minimizing stress, eating healthy, adding
 
 I'm constantly updating and tweaking my routines as society learns more about what works for humans (and as I learn more about what works for this human). I've organized the content into sections:
 
-1. [[#What I do]]
-2. [[#What I don't do]]
-3. [[#How I do it]]
-4. [[#Why I do what I do]]
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+
+- [What I do](#what-i-do)
+  - [Morning minerals plus anti-fibrin](#morning-minerals-plus-anti-fibrin)
+  - [Morning light](#morning-light)
+  - [Mid-morning Smoothie](#mid-morning-smoothie)
+  - [Lunch with Proteins and Fats](#lunch-with-proteins-and-fats)
+  - [After 5 PM](#after-5-pm)
+  - [Saturday](#saturday)
+  - [Sunday and Monday](#sunday-and-monday)
+- [What I don't do](#what-i-dont-do)
+- [How I do it](#how-i-do-it)
+  - [How I take Neprinol AFD](#how-i-take-neprinol-afd)
+  - [How I use red light therapy](#how-i-use-red-light-therapy)
+- [Why I do what I do](#why-i-do-what-i-do)
+  - [Why I take Capra Mineral Whey](#why-i-take-capra-mineral-whey)
+  - [Why I take Neprinol AFD](#why-i-take-neprinol-afd)
+  - [Why I use red light therapy](#why-i-use-red-light-therapy)
+  - [Copper water filter](#copper-water-filter)
+  - [Capra Mineral Whey](#capra-mineral-whey)
+  - [Pentadecylic acid (C15:0)](#pentadecylic-acid-c150)
+  - [Seed](#seed)
+  - [AKG](#akg)
+  - [Nattokinase + Serrapeptase](#nattokinase--serrapeptase)
+  - [Whole lemon](#whole-lemon)
+  - [Whole apple](#whole-apple)
+  - [Baby carrots](#baby-carrots)
+  - [Organic blueberries](#organic-blueberries)
+  - [Fermented Goat-Milk Protein](#fermented-goat-milk-protein)
+  - [Organic Lion's Mane Mushroom powder](#organic-lions-mane-mushroom-powder)
+  - [Creatine Monohydrate](#creatine-monohydrate)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 Feel free to jump to the section that interests you most.
 

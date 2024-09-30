@@ -162,7 +162,7 @@ html {
 }
 
 a {
-  color: var(--primary-color);
+  color: var(--primary-color); /* link color no hover */
   text-decoration: none;
   position: relative;
   transition: color 0.3s ease;
@@ -175,18 +175,18 @@ a::after {
   bottom: -2px;
   width: 100%;
   height: 2px;
-  background-color: var(--primary-color);
+  background-color: var(--primary-color); /* line color shrinking */
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.3s ease;
 }
 
 a:hover {
-  color: var(--primary-hover-color);
+  color: var(--secondary-hover-color); /* link color on hover */
 }
 
 a:hover::after {
-  background-color: var(--secondary-color);
+  background-color: var(--secondary-color); /* line color growing */
   transform: scaleX(1);
 }
 
@@ -355,22 +355,25 @@ code {
   text-decoration: none;
   position: relative;
   padding-left: 1em;
+  padding-bottom: 0.3em;
+}
+
+.toc a:hover {
+  color: var(--secondary-hover-color);
 }
 
 .toc a::before {
   content: '';
   position: absolute;
   left: 0;
-  top: 0.6em;
+  top: 0.4em;
   width: 6px;
   height: 6px;
   background-color: var(--primary-color);
   border-radius: 50%;
+  transform: scaleX(0);
+  transform-origin: left;
   transition: transform 0.3s ease;
-}
-
-.toc a:hover {
-  color: var(--primary-hover-color);
 }
 
 .toc a:hover::before {
