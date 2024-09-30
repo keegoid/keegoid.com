@@ -15,26 +15,39 @@ Some of the links on this site are affiliate links. This means that if you click
 
 With that out of the way, let's dive in!
 
-I'm constantly updating/improving my routines as society learns more about what works for humans, and I learn more about what works for this human.
+My goal is to slow or reverse aging by minimizing stress, eating healthy, adding supplements where needed, exercising regularly, and maintaining connections with friends. A longer healthspan means staying healthy for longer so that if/when age-related decline happens, I'm still well above the point where I would lose mobility and quality of life.
 
-My goal is to slow and/or reverse aging by minimizing stress, eating healthy, adding supplements where needed, exercising regularly, and maintaining connections with friends.
+I'm constantly updating and tweaking my routines as society learns more about what works for humans (and as I learn more about what works for this human). I've organized the content into sections:
 
-## Morning Light and Nutrients
+1. [[#What I do]]
+2. [[#What I don't do]]
+3. [[#How I do it]]
+4. [[#Why I do what I do]]
 
-I start most days with red and near-infrared light therapy. The panel I use hangs from my bedroom door and emits 5 frequencies of light. The health term for this kind of treatment is called photobiomodulation (PBM). *No autocorrect, that's not discombobulation.*
+Feel free to jump to the section that interests you most.
 
-I pour a tall glass of water filtered in a copper container for additional ions and a wonderfully fresh taste. Add 3 scoops of Mt. Capra Mineral Whey.
+## What I do
 
-*Note: 1x means 1 capsule.*
+### Morning minerals plus anti-fibrin
 
-1. 1x Pentadecylic acid (C15:0)
-1. 2x Seed probiotic
-1. 3x AKG
-1. 5x nattokinase + serrapeptase
+Monday through Friday, I start the morning with a tall glass of water filtered by [Sertodo Copper Sana Vida Copper Water Filtration Systems](https://sertodo.com/products/sertodo-copper-water-filter-system?variant=45714273501429) for additional ions and a wonderfully fresh taste. I add 3 scoops of Mt. Capra's [Capra Mineral Whey](https://mtcapra.com/product/capra-mineral-whey-goat-milk-minerals/)[^1].
 
-I don't eat for 2 hours to allow the nattokinase and serrapeptase to work on fibrin in my arteries.
+I drink the mineral water with 5 capsules of [Neprinol AFD (Advanced Fibrin Defense)](https://amzn.to/3zzFf9j). It contains enzymes [nattokinase](https://en.wikipedia.org/wiki/Nattokinase) + [serrapeptase](https://en.wikipedia.org/wiki/Serratiopeptidase) that act on [fibrin](https://en.wikipedia.org/wiki/Fibrin) in the body[^2].
 
-This morning routine has had an especially powerful impact on my health. I used to get chest pains and feel like my chest was heavy and breathing was not effortless. It has made such a huge difference for me. I no longer have chest pains and I can breathe easy again. I feel like I have my life back.
+[[#How I take Neprinol AFD]]
+
+[[#Why I take Neprinol AFD]]
+
+### Morning light
+
+While Neprinol goes to work on the fibrin that makes up my blood clots, I hang out in front of a red and near-infrared light. I have a [Rojo panel](https://www.rojolighttherapy.com/) that hangs from my bedroom door on a pulley so I can move it up and down while standing in front of it naked. Finally my own personal nude beach at sunrise!
+
+[[#How I use red light therapy]]
+
+[[#Why I use red light therapy]]
+
+1. 1 capsule Pentadecylic acid (C15:0)
+1. 2 capsules Seed probiotic
 
 ### Mid-morning Smoothie
 
@@ -64,32 +77,95 @@ This is the biggest meal of my day.
 
 10K run
 
-### Why I do what I do?
+### Sunday and Monday
+
+Recovery days
+
+## What I don't do
+
+- I don't take [Capra Mineral Whey](https://mtcapra.com/product/capra-mineral-whey-goat-milk-minerals/) before, during, or after exercise because sweating eliminates more salt from the body.
+- I don't eat for 2 hours to allow the nattokinase and serrapeptase to work on fibrin in my arteries.
+- I don't take [Neprinol AFD](https://amzn.to/3zzFf9j) on weekends or days I'm going to do heavy exercise. Nattokinase and serrapeptase might increase the risk of bleeding.
+- I don't spend too long in front of the [Rojo panel](https://www.rojolighttherapy.com/). Too much of a good thing can be a bad thing. Max is 40 minutes for me.
+
+## How I do it
+
+This is the how-to section for those who, like me, get excited about actually implementing longevity techniques that show promise!
+
+### How I take Neprinol AFD
+
+I initially thought I could do what the Japanese do and eat [Natto](https://en.wikipedia.org/wiki/Natt%C5%8D) more often. I gave it a go for a week. Alas, I couldn't deal with the taste and texture.
+
+### How I use red light therapy
+
+The [Rojo panel](https://www.rojolighttherapy.com/) emits 5 frequencies of light which kind of bleed into each other on the [electromagnetic spectrum](https://en.wikipedia.org/wiki/Electromagnetic_spectrum).
+
+While the Rojo panel does allow controlling each frequency's power level individually, it's hard to know what the right levels should be. So I just set all 5 frequencies to 100%.
+
+I stand 6 inches away for muscle recovery, and 3 feet away for eye treatments (still at 100% power). According to the [inverse-square law](https://en.wikipedia.org/wiki/Inverse-square_law), the farther you stand from the panel the lower the intensity.
+
+I like to catch up on my favorite YouTube videos while I stand in front of the light for 20-40 minutes. A larger panel reduces treatment time because it can cover the whole body, turning 180 degrees half-way through. I have a smaller panel so I focus on the most sore areas, spending at least 10 minutes on each.
+
+By the end my skin is pink and warm, joints are loose, and mitochondrial batteries recharged. It's a nice way to start the day.
+
+By the way,  the term for this kind of treatment is [photobiomodulation](https://en.wikipedia.org/wiki/Low-level_laser_therapy),  PBM for short[^3].
+
+## Why I do what I do
 
 What follows are my reasons for the supplements I take and what I aim to achieve for my own health and longevity goals. My reasons may not be accurate and I might have gaps in my knowledge that could cause harm. In other words, do your own research before choosing to embark on a journey like mine.
 
-#### Copper water filter
+### Why I take Capra Mineral Whey
 
-#### Capra Mineral Whey
+Capra Mineral Whey has a high ratio of potassium to sodium. I like that because it's hard to get enough potassium.
 
-#### Pentadecylic acid (C15:0)
+### Why I take Neprinol AFD
 
-#### Seed
+Neprinol is certainly one of the more expensive supplements I take. However, of all the supplements, Neprinol has been **by far** the most impactful for me.[^2]
 
-#### AKG
+I used to get daily pain and tightness in my chest, difficulty breathing. That is completely gone. I started taking Neprinol about a year before I started exercising regularly and noticed a marked improvement after the first month. I can't recommend this highly enough for cardiovascular health.
 
-#### Nattokinase + Serrapeptase
+### Why I use red light therapy
 
-#### Whole lemon
+I use red light therapy to:
 
-#### Whole apple
+1. Reduce inflammation and pain.
+1. Enhance muscle recovery.
+1. Increase blood flow to my retinas.
+1. Improve mitochondrial health.
 
-#### Baby carrots
+I aim to:
 
-#### Organic blueberries
+1. Keep my joints healthy as I age.
+1. Gain weight by increasing muscle mass.
+1. Reduce the risk of [age-related macular degeneration (AMD)](https://en.wikipedia.org/wiki/Macular_degeneration).
+1. Increase healthspan and keep youthful energy as I age.
 
-#### Fermented Goat-Milk Protein
+### Copper water filter
 
-#### Organic Lion's Mane Mushroom powder
+### Capra Mineral Whey
 
-#### Creatine Monohydrate
+### Pentadecylic acid (C15:0)
+
+### Seed
+
+### AKG
+
+### Nattokinase + Serrapeptase
+
+### Whole lemon
+
+### Whole apple
+
+### Baby carrots
+
+### Organic blueberries
+
+### Fermented Goat-Milk Protein
+
+### Organic Lion's Mane Mushroom powder
+
+### Creatine Monohydrate
+
+[^1]: Use coupon code `REF3RU7YWBW7S` at checkout to get $10 off your first order of $50+, and I also get $10!
+[^2]: Acts like a blood thinner and may enhance the effects of medications. Consult a medical professional before trying.
+[^3]: No autocorrect, photobiomodulation is **not** discombobulation. lol
