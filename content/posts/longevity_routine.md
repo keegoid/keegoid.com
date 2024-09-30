@@ -41,9 +41,8 @@ I drink the mineral water with 5 capsules of [Neprinol AFD (Advanced Fibrin Defe
 
 While Neprinol goes to work on the fibrin that makes up my blood clots, I hang out in front of a red and near-infrared light. I have a [Rojo panel](https://www.rojolighttherapy.com/) that hangs from my bedroom door on a pulley so I can move it up and down while standing in front of it naked. Finally my own personal nude beach at sunrise!
 
-[[#How I use red light therapy]]
-
-[[#Why I use red light therapy]]
+- [How I use red light therapy](#how-i-use-red-light-therapy)
+- [Why I use red light therapy](#why-i-use-red-light-therapy)
 
 1. 1 capsule Pentadecylic acid (C15:0)
 1. 2 capsules Seed probiotic
