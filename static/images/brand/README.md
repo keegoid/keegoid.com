@@ -1,40 +1,54 @@
-# Keegoid LLC brand mark
+# Keegoid site mark
 
-The **Principal Node K** represents one human principal supplying direction and
-moral judgment to a small system of aligned agents. The carbon spine is the
-principal; the teal node is the decision point; the two trajectories are agent
-outputs. The open geometry points toward abundance and expansion without using
-literal robot, circuit, or equation imagery.
+The **Tile K** is a solid indigo squircle with the K knocked out of it. It was
+chosen over five alternatives because it is the only one that still reads at
+16px, which is where a mark actually lives: favicons, tab strips, bookmarks.
+
+`keegoid-tile.svg` is the source of truth. Everything else here is derived from
+it, and the masthead inlines the same geometry in
+`layouts/partials/header.html` so it can take its colours from CSS.
 
 ## Files
 
-- `keegoid-mark.svg` — canonical two-color square mark.
-- `keegoid-mark-mono.svg` — one-color mark; set the CSS `color` property.
-- `keegoid-logo.svg` — horizontal `Keegoid LLC` lockup.
-- `keegoid-mark-64.png`, `keegoid-mark-256.png`, and
-  `keegoid-mark-1024.png` — transparent raster mark exports.
-- `keegoid-logo-1360.png` and `keegoid-logo-1520.png` — transparent raster
-  lockups rendered with the vendored Ubuntu Bold font.
-- `keegoid-principal-node-concept.png` — generated exploration on chroma key.
-- `keegoid-principal-node-concept-transparent.png` — transparent exploration.
+- `keegoid-tile.svg` — canonical mark, rounded corners, indigo on transparent.
+- `keegoid-tile-64.png` — 64px PNG icon for browsers without SVG favicon support.
+- `keegoid-touch-icon.png` — 180px iOS home-screen icon. **Square, no rounding,
+  fully opaque**: iOS applies its own corner mask, and any transparency is
+  composited onto black.
+- `keegoid-og-card.png` — 1200x630 social card, mark centred on white. Opaque —
+  transparent PNGs flatten to black on X, Facebook and iMessage.
+- `../../favicon.svg` — favicon. Lifts the tile to `#6D4DF6` under
+  `prefers-color-scheme: dark` so it does not sink into a dark tab strip.
+- `../../favicon.ico` — 48/32/16 fallback.
 
-## Palette
+## Colour
 
-- Carbon: `#111827`
-- Deep teal: `#1F766D`
-- Steel blue, supporting only: `#2C659F`
-- Fog: `#EEF1F4`
-- Paper: `#FFFFFF`
-- Human accent, sparingly: `#A86418`
+The mark is `#2B00A6`, the same indigo as the site's links — the palette is
+deliberately a single accent. The knocked-out K is the page ground, so in the
+masthead it is `var(--bg)` rather than a hardcoded white.
 
-## Usage
+## Regenerating the rasters
 
-- Prefer the two-color mark on white and the monochrome mark for laser print.
-- For Stripe Branding, use `keegoid-mark-256.png` as the square icon and
-  `keegoid-logo-1520.png` as the non-square logo. Both are transparent PNGs,
-  at least 128 px in each dimension, and under Stripe's 512 KB upload limit.
-- Keep clear space equal to the decision-node diameter on every side.
-- Keep the square mark at least 20 px on screen or 0.2 in in print.
-- Use Ubuntu Sans 600-700 for live-text wordmarks. Keep `LLC` visually smaller.
-- Do not add gradients, shadows, a container tile, circuitry, faces, or taglines
-  inside the mark.
+ImageMagick on this machine has no librsvg delegate. Its fallback SVG renderer
+silently drops stroked paths and will emit a blank indigo tile with no K, at a
+plausible file size and with a success exit code. Draw with MVG primitives
+instead, render at 1024px, and downsample:
+
+```bash
+magick -size 1024x1024 xc:none \
+  -fill '#2B00A6' -stroke none -draw "roundrectangle 0,0 1023,1023 246,246" \
+  -draw "stroke-linecap round stroke-linejoin round stroke-width 113 stroke #FFFFFF fill none path 'M 348,266 L 348,758'" \
+  -draw "stroke-linecap round stroke-linejoin round stroke-width 113 stroke #FFFFFF fill none path 'M 717,266 L 430,512 L 717,758'" \
+  /tmp/tile-1024.png
+```
+
+Coordinates are the SVG's 100-unit grid scaled by 10.24. Use `rectangle` in
+place of `roundrectangle` for the iOS icon. Always open the output and look at
+it before committing.
+
+## History
+
+The previous **Principal Node K** mark and the Keegoid LLC lockups were removed
+from this repo on 2026-08-09 — the site no longer used them, and they were
+carrying about 1.2 MB. They remain in git history and can be recovered with
+`git show c7352f0:static/images/brand/<file>`.
