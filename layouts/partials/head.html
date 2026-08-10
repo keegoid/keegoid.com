@@ -2,9 +2,8 @@
   <meta charset="UTF-8">
   <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} · {{ .Site.Title }}{{ end }}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="color-scheme" content="light dark">
-  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#FBF9F5">
-  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#16191D">
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#FFFFFF">
   <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
   {{ if .Params.private }}<meta name="robots" content="noindex, nofollow, noarchive">{{ end }}
 
@@ -21,10 +20,8 @@
   <meta name="twitter:description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
   <meta name="twitter:image" content="{{ with .Params.background_image }}{{ . | absURL }}{{ else }}{{ .Site.Params.defaultImage | absURL }}{{ end }}">
 
-  <!-- Fonts (italic only paints above the fold on the home masthead) -->
-  <link rel="preload" href="/fonts/Fraunces-Variable.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="/fonts/Newsreader-Variable.woff2" as="font" type="font/woff2" crossorigin>
-  {{ if .IsHome }}<link rel="preload" href="/fonts/Newsreader-Italic-Variable.woff2" as="font" type="font/woff2" crossorigin>{{ end }}
+  <!-- Fonts -->
+  <link rel="preload" href="/fonts/Figtree-Variable.woff2" as="font" type="font/woff2" crossorigin>
 
   <!-- CSS Styles -->
   {{ $styleMain := resources.Get "css/style.css" }}
