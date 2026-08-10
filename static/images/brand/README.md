@@ -11,6 +11,8 @@ it, and the masthead inlines the same geometry in
 ## Files
 
 - `keegoid-tile.svg` — canonical mark, rounded corners, indigo on transparent.
+- `keegoid-tile-square.svg` — same mark without the corner radius. Source for
+  the iOS icon only; the geometry lives in SVG so it is never retyped in shell.
 - `keegoid-tile-64.png` — 64px PNG icon for browsers without SVG favicon support.
 - `keegoid-touch-icon.png` — 180px iOS home-screen icon. **Square, no rounding,
   fully opaque**: iOS applies its own corner mask, and any transparency is
@@ -29,22 +31,26 @@ masthead it is `var(--bg)` rather than a hardcoded white.
 
 ## Regenerating the rasters
 
-ImageMagick on this machine has no librsvg delegate. Its fallback SVG renderer
-silently drops stroked paths and will emit a blank indigo tile with no K, at a
-plausible file size and with a success exit code. Draw with MVG primitives
-instead, render at 1024px, and downsample:
+Rasterise with `rsvg-convert` (`brew install librsvg`), never with `magick`
+directly. **`magick tile.svg out.png` renders a blank indigo tile with no K** —
+it uses its internal MSVG coder, which drops stroked paths, and it does this
+even when librsvg is installed, and even via the explicit `magick rsvg:` prefix.
+It exits 0 and writes a plausible file size, so the failure is silent.
 
 ```bash
-magick -size 1024x1024 xc:none \
-  -fill '#2B00A6' -stroke none -draw "roundrectangle 0,0 1023,1023 246,246" \
-  -draw "stroke-linecap round stroke-linejoin round stroke-width 113 stroke #FFFFFF fill none path 'M 348,266 L 348,758'" \
-  -draw "stroke-linecap round stroke-linejoin round stroke-width 113 stroke #FFFFFF fill none path 'M 717,266 L 430,512 L 717,758'" \
-  /tmp/tile-1024.png
+B=static/images/brand
+rsvg-convert -w 64  -h 64  $B/keegoid-tile.svg        -o $B/keegoid-tile-64.png
+rsvg-convert -w 180 -h 180 $B/keegoid-tile-square.svg -o $B/keegoid-touch-icon.png
+rsvg-convert -w 256 -h 256 $B/keegoid-tile.svg        -o /tmp/tile-256.png
+rsvg-convert -w 380 -h 380 $B/keegoid-tile.svg        -o /tmp/tile-380.png
+
+# magick is still fine for compositing and .ico packing — just not for SVG input
+magick -size 1200x630 xc:'#FFFFFF' /tmp/tile-380.png -gravity center -composite \
+  $B/keegoid-og-card.png
+magick /tmp/tile-256.png -define icon:auto-resize=48,32,16 static/favicon.ico
 ```
 
-Coordinates are the SVG's 100-unit grid scaled by 10.24. Use `rectangle` in
-place of `roundrectangle` for the iOS icon. Always open the output and look at
-it before committing.
+Open the output and look at it before committing.
 
 ## History
 
