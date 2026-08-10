@@ -48,8 +48,6 @@
   --ink-soft: #55575C;
   --accent: #2B00A6;
   --accent-strong: #1C006E;
-  /* Brand mark keeps its book colours; the accent above is for links only. */
-  --brand: #1F766D;
   --rule: #E3E3E6;
   --code-paper: #F4F4F6;
   --code-border: #E3E3E6;
@@ -138,12 +136,13 @@ a:focus-visible {
   flex: none;
 }
 
-.masthead-mark .mark-spine {
-  fill: currentColor;
+.masthead-mark .mark-tile {
+  fill: var(--accent);
 }
 
-.masthead-mark .mark-node {
-  fill: var(--brand);
+/* K is knocked out of the tile, so it tracks the page ground */
+.masthead-mark .mark-k {
+  stroke: var(--bg);
 }
 
 .masthead-title {
@@ -262,7 +261,7 @@ a:focus-visible {
   width: 9px;
   height: 9px;
   border-radius: 50%;
-  background: var(--brand);
+  background: var(--accent);
 }
 
 /* Body typography. Content headings are demoted one level by the render
