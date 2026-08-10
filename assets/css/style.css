@@ -83,8 +83,10 @@
   box-sizing: border-box;
 }
 
-html {
-  scroll-behavior: smooth;
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
 }
 
 body {
@@ -232,11 +234,15 @@ a:focus-visible {
 .contents-link .leader {
   flex: 1;
   min-width: 2rem;
-  border-bottom: 2px dotted color-mix(in srgb, var(--ink-soft) 45%, transparent);
+  /* plain fallback first: color-mix inside a shorthand voids the whole
+     declaration on engines without it */
+  border-bottom: 2px dotted var(--rule);
+  border-bottom-color: color-mix(in srgb, var(--ink-soft) 45%, transparent);
   transform: translateY(-0.3em);
 }
 
 .contents-link:hover .leader {
+  border-bottom-color: var(--accent);
   border-bottom-color: color-mix(in srgb, var(--accent) 60%, transparent);
 }
 
@@ -281,9 +287,12 @@ a:focus-visible {
 }
 
 /* Body typography */
+/* Post content headings are demoted one level by the render hook
+   (## → h3) on the homepage; standalone pages (About) keep h2. */
 .post-content h2,
 .post-content h3,
-.post-content h4 {
+.post-content h4,
+.post-content h5 {
   font-family: var(--font-display);
   font-weight: 580;
   line-height: 1.2;
@@ -291,15 +300,16 @@ a:focus-visible {
   margin: 2.2em 0 0.5em;
 }
 
-.post-content h2 {
+.post-content h2,
+.post-content h3 {
   font-size: 1.5rem;
 }
 
-.post-content h3 {
+.post-content h4 {
   font-size: 1.2rem;
 }
 
-.post-content h4 {
+.post-content h5 {
   font-size: 1.05rem;
 }
 
@@ -488,18 +498,16 @@ code {
   }
 }
 
-/* Entrance motion — one staggered rise on load */
+/* Entrance motion — one staggered rise on load. Each element carries its
+   own --rise-d from the template, so dividers and any number of posts
+   stagger correctly; capped so deep-linked content never lags. */
 @media (prefers-reduced-motion: no-preference) {
   .rise {
     opacity: 0;
     transform: translateY(14px);
     animation: rise 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    animation-delay: min(var(--rise-d, 0ms), 480ms);
   }
-
-  .rise:nth-child(2) { animation-delay: 0.08s; }
-  .rise:nth-child(3) { animation-delay: 0.16s; }
-  .rise:nth-child(4) { animation-delay: 0.24s; }
-  .rise:nth-child(5) { animation-delay: 0.32s; }
 
   @keyframes rise {
     to {
@@ -524,9 +532,11 @@ code {
   }
 }
 
-/* Accessibility */
-@media screen and (forced-colors: active) {
-  * {
-    forced-color-adjust: auto;
+/* Forced colors (Windows High Contrast): the divider dot is drawn with
+   background-color, which forced-colors strips — repaint it in CanvasText */
+@media (forced-colors: active) {
+  .post-divider {
+    background: CanvasText;
+    forced-color-adjust: none;
   }
 }

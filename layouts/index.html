@@ -3,31 +3,40 @@
     {{ $posts := (where .Site.RegularPages "Section" "posts").ByDate.Reverse }}
 
     <!-- Contents — leader-dot index -->
-    <nav class="contents rise" aria-label="Article index">
-      <h2 class="contents-heading">Contents</h2>
-      <ol>
-        {{ range $posts }}
-          <li>
-            <a class="contents-link" href="#{{ .File.TranslationBaseName }}">
-              <span class="what">{{ .Title }}</span>
-              <span class="leader" aria-hidden="true"></span>
-              <span class="when">{{ .Date.Format "Jan 2006" }}</span>
-            </a>
-          </li>
-        {{ end }}
-      </ol>
-    </nav>
+    {{ with $posts }}
+      <nav class="contents rise" style="--rise-d: 80ms" aria-label="Article index">
+        <h2 class="contents-heading">Contents</h2>
+        <ol>
+          {{ range . }}
+            <li>
+              <a class="contents-link" href="#{{ .File.TranslationBaseName }}">
+                <span class="what">{{ .Title }}</span>
+                <span class="leader" aria-hidden="true"></span>
+                <span class="when">{{ .Date.Format "Jan 2006" }}</span>
+              </a>
+            </li>
+          {{ end }}
+        </ol>
+      </nav>
+    {{ end }}
 
     <!-- Articles -->
     {{ range $i, $p := $posts }}
-      {{ if gt $i 0 }}<hr class="post-divider" aria-hidden="true">{{ end }}
-      <article class="post rise" id="{{ $p.File.TranslationBaseName }}">
+      {{ $delay := printf "--rise-d: %dms" (add 160 (mul $i 80)) }}
+      {{ if gt $i 0 }}<hr class="post-divider rise" style="{{ $delay | safeCSS }}" aria-hidden="true">{{ end }}
+      <article class="post rise" style="{{ $delay | safeCSS }}" id="{{ $p.File.TranslationBaseName }}">
         <h2 class="post-title">{{ $p.Title }}</h2>
         <div class="post-dates">
           Published {{ $p.Date.Format "January 2, 2006" }}{{ if gt $p.Lastmod $p.Date }} · Updated {{ $p.Lastmod.Format "January 2, 2006" }}{{ end }}
         </div>
         <div class="post-content">
-          {{ $p.Content }}
+          {{ $slug := $p.File.TranslationBaseName }}
+          {{ $p.Content
+             | replaceRE `id="fn:` (printf `id="%s-fn:` $slug)
+             | replaceRE `id="fnref:` (printf `id="%s-fnref:` $slug)
+             | replaceRE `href="#fn:` (printf `href="#%s-fn:` $slug)
+             | replaceRE `href="#fnref:` (printf `href="#%s-fnref:` $slug)
+             | safeHTML }}
         </div>
         {{ with $p.Params.background_image }}
           <figure class="post-art">

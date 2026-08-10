@@ -21,17 +21,17 @@
   <meta name="twitter:description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
   <meta name="twitter:image" content="{{ with .Params.background_image }}{{ . | absURL }}{{ else }}{{ .Site.Params.defaultImage | absURL }}{{ end }}">
 
-  <!-- Fonts -->
+  <!-- Fonts (italic only paints above the fold on the home masthead) -->
   <link rel="preload" href="/fonts/Fraunces-Variable.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/Newsreader-Variable.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="/fonts/Newsreader-Italic-Variable.woff2" as="font" type="font/woff2" crossorigin>
+  {{ if .IsHome }}<link rel="preload" href="/fonts/Newsreader-Italic-Variable.woff2" as="font" type="font/woff2" crossorigin>{{ end }}
 
   <!-- CSS Styles -->
   {{ $styleMain := resources.Get "css/style.css" }}
   {{ $styleSyntax := resources.Get "css/syntax.css" }}
   {{ $styles := slice $styleSyntax $styleMain | resources.Concat "css/style.css" | minify | fingerprint }}
   <link rel="stylesheet" href="{{ $styles.Permalink }}" integrity="{{ $styles.Data.Integrity }}">
-  <link rel="icon" href="/images/brand/keegoid-mark.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="icon" type="image/png" sizes="64x64" href="/images/brand/keegoid-mark-64.png">
-  <link rel="apple-touch-icon" href="/images/brand/keegoid-mark-256.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/brand/keegoid-touch-icon.png">
 </head>

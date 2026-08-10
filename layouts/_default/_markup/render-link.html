@@ -1,0 +1,7 @@
+{{- /* Fragment-only links inside posts must follow the per-post id
+     namespacing applied by render-heading.html. */ -}}
+{{- $dest := .Destination -}}
+{{- if and (eq .Page.Section "posts") (strings.HasPrefix $dest "#") -}}
+  {{- $dest = printf "#%s-%s" .Page.File.TranslationBaseName (strings.TrimPrefix "#" $dest) -}}
+{{- end -}}
+<a href="{{ $dest | safeURL }}"{{ with .Title }} title="{{ . }}"{{ end }}>{{ .Text }}</a>
