@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 200" role="img" aria-labelledby="title desc">
+  <title id="title">Keegoid LLC</title>
+  <desc id="desc">Keegoid Principal Node mark with the Keegoid LLC wordmark.</desc>
+  <g transform="translate(14 8) scale(.72)">
+    <path fill="#111827" d="M44 36 68 48v68h20v24H68v68l-24 12V36Z"/>
+    <path fill="#1F766D" d="m99 114 75-75h22v22l-82 82-15-15v-14Zm0 28 15-15 82 82v22h-22l-75-75v-14Z"/>
+    <circle cx="100" cy="128" r="15" fill="#1F766D"/>
+  </g>
+  <text x="186" y="127" fill="#111827" font-family="Ubuntu Sans, Arial, sans-serif" font-size="82" font-weight="700" letter-spacing="-2">Keegoid</text>
+  <text x="544" y="127" fill="#1F766D" font-family="Ubuntu Sans, Arial, sans-serif" font-size="34" font-weight="700" letter-spacing="5">LLC</text>
+</svg>

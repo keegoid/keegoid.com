@@ -7,7 +7,7 @@ enableGitInfo = true
 [params]
   mainSections = ["posts"]
   description = "LLAP | Longevity hacks, gadget love, and appreciation of nature"
-  defaultImage = "https://keegoid.com/images/logo.jpg"
+  defaultImage = "https://keegoid.com/images/brand/keegoid-mark-1024.png"
 
 [markup]
   [markup.highlight]

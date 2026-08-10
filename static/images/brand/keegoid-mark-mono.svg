@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="title desc">
+  <title id="title">Keegoid Principal Node monochrome mark</title>
+  <desc id="desc">A human-directed spine feeding a central decision node and two agent trajectories.</desc>
+  <path fill="currentColor" d="M44 36 68 48v68h20v24H68v68l-24 12V36Z"/>
+  <path fill="currentColor" d="m99 114 75-75h22v22l-82 82-15-15v-14Zm0 28 15-15 82 82v22h-22l-75-75v-14Z"/>
+  <circle cx="100" cy="128" r="15" fill="currentColor"/>
+</svg>

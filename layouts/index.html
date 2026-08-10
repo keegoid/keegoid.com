@@ -1,34 +1,40 @@
 {{ define "main" }}
-  <div class="container">
-    <div class="content-wrapper">
-      <!-- Table of Contents -->
-      <nav class="toc">
-        <h2>Articles</h2>
-        <ul>
-          {{ range .Site.RegularPages.ByDate }}
-            <li>
-              <a href="#{{ .File.TranslationBaseName }}">{{ .Title }}</a>
-              <!-- Optionally, extract and list subheadings -->
-            </li>
-          {{ end }}
-        </ul>
-      </nav>
+  <main class="page">
+    {{ $posts := (where .Site.RegularPages "Section" "posts").ByDate.Reverse }}
 
-      <!-- Main Content -->
-      <div class="content">
-        {{ range .Site.RegularPages.ByDate }}
-          <article class="post" id="{{ .File.TranslationBaseName }}" style="--post-bg-image: url('{{ .Params.background_image }}');">
-            <h1>{{ .Title }}</h1>
-            <div class="post-dates">
-              <span class="post-date">Published: {{ .Date.Format "January 2, 2006" }}</span>{{ if gt .Lastmod .Date }}&nbsp;|&nbsp;<span class="post-lastmod">Updated: {{ .Lastmod.Format "January 2, 2006" }}</span>{{ end }}
-            </div>
-            <div class="post-content">
-              {{ .Content }}
-            </div>
-            <hr />
-          </article>
+    <!-- Contents — leader-dot index -->
+    <nav class="contents rise" aria-label="Article index">
+      <h2 class="contents-heading">Contents</h2>
+      <ol>
+        {{ range $posts }}
+          <li>
+            <a class="contents-link" href="#{{ .File.TranslationBaseName }}">
+              <span class="what">{{ .Title }}</span>
+              <span class="leader" aria-hidden="true"></span>
+              <span class="when">{{ .Date.Format "Jan 2006" }}</span>
+            </a>
+          </li>
         {{ end }}
-      </div>
-    </div>
-  </div>
+      </ol>
+    </nav>
+
+    <!-- Articles -->
+    {{ range $i, $p := $posts }}
+      {{ if gt $i 0 }}<hr class="post-divider" aria-hidden="true">{{ end }}
+      <article class="post rise" id="{{ $p.File.TranslationBaseName }}">
+        <h2 class="post-title">{{ $p.Title }}</h2>
+        <div class="post-dates">
+          Published {{ $p.Date.Format "January 2, 2006" }}{{ if gt $p.Lastmod $p.Date }} · Updated {{ $p.Lastmod.Format "January 2, 2006" }}{{ end }}
+        </div>
+        <div class="post-content">
+          {{ $p.Content }}
+        </div>
+        {{ with $p.Params.background_image }}
+          <figure class="post-art">
+            <img src="{{ . }}" alt="" loading="lazy">
+          </figure>
+        {{ end }}
+      </article>
+    {{ end }}
+  </main>
 {{ end }}

@@ -1,13 +1,19 @@
-<header class="site-header">
-  <div class="container">
-    <div class="logo-description">
-      <a href="{{ .Site.BaseURL }}">
-        <img src="/images/logo.jpg" alt="{{ .Site.Title }} Logo" class="site-logo">
-      </a>
-      <div class="site-description">
-        <h1 class="site-title">{{ .Site.Title }}</h1>
-        <p class="site-tagline">{{ .Site.Params.description }}</p>
-      </div>
-    </div>
+<header class="masthead{{ if not .IsHome }} masthead--compact{{ end }} rise">
+  <div class="page">
+    <a class="masthead-lockup" href="{{ .Site.BaseURL }}">
+      <svg class="masthead-mark" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+        <path class="mark-spine" d="M44 36 68 48v68h20v24H68v68l-24 12V36Z"/>
+        <path class="mark-node" d="m99 114 75-75h22v22l-82 82-15-15v-14Zm0 28 15-15 82 82v22h-22l-75-75v-14Z"/>
+        <circle class="mark-node" cx="100" cy="128" r="15"/>
+      </svg>
+      {{ if .IsHome }}
+        <h1 class="masthead-title">{{ .Site.Title }}</h1>
+      {{ else }}
+        <p class="masthead-title">{{ .Site.Title }}</p>
+      {{ end }}
+    </a>
+    {{ if .IsHome }}
+      <p class="masthead-tagline">{{ .Site.Params.description }}</p>
+    {{ end }}
   </div>
 </header>

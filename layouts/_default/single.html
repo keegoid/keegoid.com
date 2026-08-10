@@ -1,0 +1,15 @@
+{{ define "main" }}
+  <main class="page">
+    <article class="post rise">
+      <h1 class="post-title">{{ .Title }}</h1>
+      <div class="post-content">
+        {{ .Content }}
+      </div>
+      {{ with .Params.background_image }}
+        <figure class="post-art">
+          <img src="{{ . }}" alt="" loading="lazy">
+        </figure>
+      {{ end }}
+    </article>
+  </main>
+{{ end }}
