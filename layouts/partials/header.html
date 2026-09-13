@@ -1,21 +1,10 @@
 <header class="masthead{{ if not .IsHome }} masthead--compact{{ end }} rise">
   <div class="page">
-    <a class="masthead-lockup" href="{{ .Site.BaseURL }}">
-      <svg class="masthead-mark" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-        <rect class="mark-tile" width="100" height="100" rx="24"/>
-        <g class="mark-k" fill="none" stroke-width="11" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M34 26 V74"/>
-          <path d="M70 26 L42 50 L70 74"/>
-        </g>
-      </svg>
-      {{ if .IsHome }}
-        <h1 class="masthead-title">{{ .Site.Title }}</h1>
-      {{ else }}
-        <p class="masthead-title">{{ .Site.Title }}</p>
-      {{ end }}
+    <a class="masthead-lockup" href="{{ .Site.BaseURL }}" aria-label="Keegoid home">
+      {{ if .IsHome }}<h1 class="masthead-title">{{ else }}<p class="masthead-title">{{ end }}
+        <img class="masthead-logo" src="{{ "images/brand/keegoid-logo.svg" | relURL }}" width="1706" height="441" alt="Keegoid LLC">
+      {{ if .IsHome }}</h1>{{ else }}</p>{{ end }}
     </a>
-    {{ if .IsHome }}
-      <p class="masthead-tagline">{{ .Site.Params.description }}</p>
-    {{ end }}
+    {{ if .IsHome }}<p class="masthead-tagline">{{ .Site.Params.description }}</p>{{ end }}
   </div>
 </header>

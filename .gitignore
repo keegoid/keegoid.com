@@ -62,3 +62,4 @@ hugo.linux
 
 # Claude Code local config
 .claude/
+.wrangler/
